@@ -1,0 +1,13 @@
+INPUT: INTEGER
+I: INTEGER
+RESULT: INTEGER
+OUTPUT "Please input a number and you'll find out what it's factorial is!"
+INPUT INPUT
+I=1
+RESULT=1
+WHILE I<=INPUT
+RESULT = RESULT * I
+I++
+ENDWHILE
+OUTPUT RESULT
+END
