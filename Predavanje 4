@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace predavanje_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // MAIN MENU
+            Beginning:
+            Console.WriteLine("What do you want to do? \n1. All operations \n2. Circle diameter \n3. Speed \n4. Rectangle fun. \n5. It's getting hot in here \n6. Quit\n");
+            int mm = Convert.ToInt32(Console.ReadLine());
+
+            while (mm != 6)
+            {
+
+                // ALL OPERATIONS
+                if (mm == 1)
+                {
+                    Console.WriteLine("Enter two numbers and I'll do everything for you");
+                    Console.WriteLine("First number");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Second number");
+                    int b = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Their sum is: {0}", a + b);
+                    Console.WriteLine("Their difference is {0}: ", a - b);
+                    Console.WriteLine("Their multiplier is {0}: ", a * b);
+                    Console.WriteLine("Their divide is: {0}\n ", a / b);
+                    goto Beginning;
+                }
+                // DIAMETER AND AREA OF A CIRCLE
+                if (mm == 2)
+                {
+                    Console.WriteLine("Let's do something a bit round");
+                    Console.WriteLine("What is it's radius?");
+
+
+                    const double pi = 3.14159265359;
+                    int r = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("It's circumference is: {0}", 2 * pi * r);
+                    Console.WriteLine("It's circumference is: {0}\n", pi * r * r);
+                    goto Beginning;
+                }
+
+                // SPEED AND TRAVELLED AMOUNT
+                if (mm == 3)
+                {
+                    Console.WriteLine("Let's see how fast you are");
+                    Console.WriteLine("How fast are you in km/h?");
+                    int v = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("How many hours have passed?");
+                    int t = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("You have travelled {0} kilometers\n", v * t);
+                    goto Beginning;
+                }
+
+                // RECTANGLE
+                if (mm == 4)
+                {
+                   Console.WriteLine("Rectangle fun!");
+                    Console.WriteLine("Side a?");
+                    int sidea = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Side b?");
+                    int sideb = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("It's diagonal is {0}.\nIt's area is {1}. \nIt's cirfumference is {2}\n", Math.Sqrt(sidea * sidea+sideb*sideb), sidea*sideb, 2*sidea + 2*sideb);
+                    goto Beginning;
+                }
+
+                // CELSIUS AND FAHRENHEIT
+                if (mm == 5)
+                {
+                    Console.WriteLine("Do want:\n1. C to F\n2. F to C");
+                    int cfchoice = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the temperature");
+                    int temp = Convert.ToInt32(Console.ReadLine());
+
+                    if (cfchoice == 1)
+                    {
+                        Console.WriteLine("{0} C is {1} F\n", temp, temp * 9 / 5 + 32);
+                    
+                    }
+                    if (cfchoice == 2)
+                    {
+                        Console.WriteLine("{0} K is {1} C\n", temp, (temp-32)*5/9);
+
+                    }
+                    goto Beginning;
+
+                }              
+
+            }
+        }
+    }
+}
