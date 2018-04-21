@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Predavanje_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Main menu
+            Beginning:
+            Console.WriteLine("\nWhat do you want to do? \n0. Quit \n1. Boolean \n2. Byte \n3. sByte \n4. Character \n5. Decimal \n6. Double \n7. Float \n8. Integer \n9. uInt \n10. Long \n11. uLong \n\n");
+            int mm = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n");
+           
+                
+                if (mm == 0)
+                {
+                    Console.WriteLine("Quit");
+                }
+                //Booleans
+                if (mm == 1)
+                {
+                    bool tn = true;
+                    Console.WriteLine("Booleans can be either {0} or {1}", tn, !tn);
+                    goto Beginning;
+                }
+                //Bytes
+                if (mm == 2)
+                {
+                    Console.WriteLine("Minimum value for byte is {0} and max is {1}", byte.MinValue, byte.MaxValue);
+                    goto Beginning;
+                }
+                //Sbyte
+                if (mm == 3)
+                {
+                    Console.WriteLine("Minimum value for sbyte is {0} and max is {1}", sbyte.MinValue, sbyte.MaxValue);
+                    goto Beginning;
+                }
+                //Character
+                if (mm == 4)
+                {
+                    Console.WriteLine("Characters are from \"{0}\" to \"{1}\"", char.MinValue, char.MaxValue);
+                    goto Beginning;
+                }
+                //Decimal
+                if (mm == 5)
+                {
+                    Console.WriteLine("Decimals are from \"{0}\" to \"{1}\"", decimal.MinValue, decimal.MaxValue);
+                    goto Beginning;
+                }
+                //Double
+                if (mm == 6)
+                {
+                    Console.WriteLine("Doubles are from \"{0}\" to \"{1}\"", double.MinValue, double.MaxValue);
+                    goto Beginning;
+                }
+                //Float
+                if (mm == 7)
+                {
+                    Console.WriteLine("Floats are from \"{0}\" to \"{1}\"", float.MinValue, float.MaxValue);
+                    goto Beginning;
+                }
+                //Integer
+                if (mm == 8)
+                {
+                    Console.WriteLine("Integers are from \"{0}\" to \"{1}\"", int.MinValue, int.MaxValue);
+                    goto Beginning;
+                }
+                //UInteger
+                if (mm == 9)
+                {
+                    Console.WriteLine("uIntegers are from \"{0}\" to \"{1}\"", uint.MinValue, uint.MaxValue);
+                    goto Beginning;
+                }
+                //Long
+                if (mm == 10)
+                {
+                    Console.WriteLine("Long are from \"{0}\" to \"{1}\"", long.MinValue, long.MaxValue);
+                    goto Beginning;
+                }
+                //uLong
+                if (mm == 11)
+                {
+                    Console.WriteLine("uLong are from \"{0}\" to \"{1}\"", ulong.MinValue, ulong.MaxValue);
+                    goto Beginning;
+                }
+            }
+
+        }
+    }
